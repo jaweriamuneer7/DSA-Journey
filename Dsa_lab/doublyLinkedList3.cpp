@@ -7,7 +7,6 @@ struct Node {
     Node* next;
     Node* prev;
 };
-
 int main() {
     int userIn;
     std::cout << "Enter value to add: ";
@@ -17,7 +16,6 @@ int main() {
     Node* second = new Node{24, nullptr, nullptr};
     Node* third = new Node{36, nullptr, nullptr};
    
-
     head->next = second;
     second->prev = head;
     second->next = third;
@@ -26,9 +24,7 @@ int main() {
     Node* current = head;
     while(current->next!=nullptr) {
         current = current->next;
-
     }
-    
     Node* newNode = new Node{userIn, nullptr, nullptr};
     newNode->next = nullptr;
     newNode->prev = current;
@@ -41,6 +37,5 @@ int main() {
 
     }
     
-
     return 0;
 }
